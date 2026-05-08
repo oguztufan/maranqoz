@@ -1,0 +1,13 @@
+/* ─── Hero ─────────────────────────────────────────────── */
+.hero {
+  width: 100%;
+  line-height: 0;
+  padding-top: 80px;
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

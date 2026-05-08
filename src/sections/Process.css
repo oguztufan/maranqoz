@@ -1,0 +1,111 @@
+/* ─── Process ──────────────────────────────────────────── */
+.process {
+  background: var(--color-bg-2);
+  padding: var(--section-py) 0;
+}
+
+.process__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.process__step {
+  position: relative;
+  padding: 0 1.5rem;
+  text-align: center;
+  animation: fadeUp 0.6s ease both;
+}
+
+/* Horizontal connector */
+.process__connector {
+  position: absolute;
+  top: 2rem; /* align with center of number circle */
+  left: calc(50% + 2rem);
+  right: calc(-50% + 2rem);
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-light), var(--color-border));
+  z-index: 0;
+}
+
+/* Step number */
+.process__step-number {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 20px rgba(139, 94, 60, 0.35);
+}
+
+/* Body */
+.process__step-body {
+  padding: 0 0.5rem;
+}
+
+.process__step-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 0.6rem;
+}
+
+.process__step-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+/* CTA strip */
+.process__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--color-dark);
+  border-radius: var(--radius-xl);
+  padding: 2rem 2.5rem;
+  flex-wrap: wrap;
+}
+
+.process__cta p {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-white);
+}
+
+/* ─── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .process__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .process__connector {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .process__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process__cta {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
